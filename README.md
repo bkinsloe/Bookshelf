@@ -1,7 +1,11 @@
-# bookshelf
+# Bookshelf
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Web app for keeping track of Lucy's enormous book collection using Ember, Bootstrap (SBAdmin2), and Firebase.
+
+### TODO:
+* Display books recently added to bookshelf
+* Pull cover image, author, and title from ISBN
+* Track pages read/total pages for each book
 
 ## Prerequisites
 
@@ -36,10 +40,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 * `ember build` (development)
 * `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
 
 ## Further Reading / Useful Links
 

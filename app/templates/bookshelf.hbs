@@ -1,0 +1,27 @@
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Bookshelf</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+      {{#each model as |book|}}
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{book.name}}</h3>
+        </div>
+        <div class="panel-body">
+        </div>
+        <div class="panel-footer text-right">
+          {{#link-to 'books.edit' book.id class='btn btn-success btn-xs'}}Edit{{/link-to}}
+          <button class="btn btn-danger btn-xs" {{action 'deleteBook' book}}>Delete</button>
+        </div>
+      </div>
+      <!-- /.col-lg-3 -->
+      {{/each}}
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /#page-wrapper -->

@@ -5,7 +5,15 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
+    lessOptions: {
+      paths: [
+        'bower_components/bootstrap/less'
+      ]
+    },
+
+    'ember-font-awesome': {
+      useLess: true  // for ember-cli-less
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated
@@ -20,6 +28,14 @@ module.exports = function(defaults) {
   // modules that you would like to import into your application
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
+
+  app.import('bower_components/jquery/dist/jquery.min.js');
+  app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+  app.import('vendor/metisMenu/metisMenu.js');
+  app.import('vendor/raphael/raphael.min.js');
+  //app.import('vendor/morrisjs/morris.min.js');
+  app.import('vendor/data/morris-data.js');
+  app.import('vendor/sb-admin-2/js/sb-admin-2.js');
 
   return app.toTree();
 };
